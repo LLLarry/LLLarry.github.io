@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_1044922_kor17j23h9m.css"> -->
+	<style>
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1044922_r7bzg7zcwr8.eot?t=1550296746191'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1044922_r7bzg7zcwr8.eot?t=1550296746191#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_1044922_r7bzg7zcwr8.woff?t=1550296746191') format('woff'),
+  url('//at.alicdn.com/t/font_1044922_r7bzg7zcwr8.ttf?t=1550296746191') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1044922_r7bzg7zcwr8.svg?t=1550296746191#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-erji1:before {
+  content: "\e625";
+}
+
+.icon-erji:before {
+  content: "\e63f";
+}
+
+.icon-MV:before {
+  content: "\e6af";
+}
+
+.icon-xihuan:before {
+  content: "\e629";
+}
+
+.icon-sq:before {
+  content: "\e600";
+}
+
+.icon-bofang:before {
+  content: "\e696";
+}
+
+.icon-laba:before {
+  content: "\e62d";
+}
+
+.icon-xuanze:before {
+  content: "\e642";
+}
+
+.icon-xuanze1:before {
+  content: "\e66c";
+}
+
+.icon-xuanze2:before {
+  content: "\e627";
+}
+
+.icon-hebingxingzhuang:before {
+  content: "\e667";
+}
+
+.icon-xihuan1:before {
+  content: "\e608";
+}
+
+
+
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		li {
+			list-style: none;
+		}
+		.clearfix:after {
+	   		 content: ".";
+		    display: block;
+		    clear: both;
+		    visibility: hidden;
+		    line-height: 0;
+		    height: 0;
+		    font-size: 0;
+		}
+
+		.clearfix {
+		    *zoom: 1;
+		}
+		.app {
+			margin-left: 201px;
+			padding: 20px 20px 0 20px;
+			height: 1000px;
+			background-color: skyblue;
+		}
+		.recomDetail {
+			width: 100%;
+			height: 100%;
+         	background-color: #fafafc;
+		}
+		.recomDetail .songList {
+			height: 32px;
+			color: #666;
+			font-size: 16px;
+		}
+		.recomDetail .detailTop-img {
+			float: left;
+			position: relative;
+		}
+		.recomDetail .detailTop-img p {
+			position: absolute;
+			right: 0;
+			color: #fff;
+			height: 16px;
+			background-color: rgba(0,0,0,.1);
+		}
+		.recomDetail .detailTop-mid {
+			float: left;
+			margin-left: 20px;
+			max-height: 204px;
+		}
+		.recomDetail .detailTop-mid .detailTop-mid-title {
+			font-size: 22px;
+			color: #000;
+			font-weight: 700;
+		}
+		.recomDetail .detailTop-mid .avatar{
+			overflow: hidden;
+			line-height: 44px;
+		}
+		.recomDetail .detailTop-mid .avatar a{
+			display: flex;
+			align-items: center;
+			float: left;
+			color: #666;
+		}
+		.recomDetail .detailTop-mid .avatar a img{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+		.recomDetail .detailTop-mid .avatar a .name{
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		.recomDetail .detailTop-mid .avatar .time{
+			font-size: 14px;
+			margin-left: 10px;
+			color: #ccc;
+		}
+		.recomDetail .detailTop-mid .module {
+			height: 38px;
+		}
+		.recomDetail .detailTop-mid .module ul li {
+			float: left;
+			height: 26px;
+			line-height: 26px;
+			border: 1px solid #c6c4c5;
+			padding: 0 9px 0 27px; 
+			background-color: #fff;
+			margin-right: 10px;
+		}
+		.recomDetail .detailTop-mid .module ul li a {
+			display: block;
+			color: #000;
+			font-size: 16px;	
+		}
+		.recomDetail .detailTop-mid .lable {
+			font-size: 16px;
+			color: #000;
+			padding-top: 10px;
+		}
+		.recomDetail .detailTop-mid .lable a {
+			color: #1A5A99;
+		}
+		.recomDetail .detailTop-mid .lable span{
+			color: #AEADAE;
+		}
+		.recomDetail .detailTop-mid .introduce{
+			font-size: 16px;
+			color: #000;
+			margin-top: 15px;
+		}
+		.recomDetail .detailTop-mid .introduce span{
+			color: #666;
+		}
+		.recomDetail .musicMid {
+			width: 100%;
+			height: 62px;
+			line-height: 62px;
+		}
+		.recomDetail .musicMid .allPlay {
+			padding: 0 20px 0 20px;
+			border-right: 1px solid #e4e4e8;
+		}
+		.recomDetail .musicMid .allPlay i {
+			color: #C32C2E;
+		}
+		.recomDetail .musicMid .checked {
+			padding: 0 20px 0 5px;
+		}
+		.recomDetail .musicMid form {
+			float: right;
+		}
+		.recomDetail .musicMid form input {
+			width: 174px;
+			height: 30px;
+			border: 1px solid #e4e4e7;
+			border-radius: 15px;
+			padding-left: 10px;
+		}
+		.recomDetail .musicMid form input::-webkit-input-placeholder{
+            color: #ccc;
+        }
+        .recomDetail .music-list {
+        	width: 100%;
+        }
+        .recomDetail .music-list li{
+        	height: 44px;
+        	line-height: 44px;
+        	/*background-color: pink;*/
+			padding: 0 13px 0 20px;
+        }
+        .recomDetail .music-list li .listIndex{
+			font-size: 14px;
+			color: #000;
+			padding-right: 13px;
+			position: relative;
+        }
+        .recomDetail .music-list li .name {
+        	margin-left: 13px;
+        	font-size: 16px;
+        	color: #000;
+        }
+        .recomDetail .music-list li .singer {
+			position: absolute;
+			left: 45%;
+			color: #a2a2a2;
+        }
+         .recomDetail .music-list li .cd {
+         	position: absolute;
+			left: 68%;
+			color: #a2a2a2;
+         }
+          .recomDetail .music-list li .time {
+         	position: absolute;
+			left: 89%;
+			color: #a2a2a2;
+         }
+          .recomDetail .music-list li .sq {
+         	float: right;
+         	font-size: 20px;
+         	color: #FE672E;
+         }
+         .recomDetail .music-list li .mv {
+         	font-size: 20px;
+         	color: #C32C2E;
+         }
+         .firstBg{
+         	background-color: #F4F4F6;
+         }
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div class="recomDetail">
+			<p class="songList">歌单</p>
+			<div class="detailTop clearfix" >
+				<div class="detailTop-img">
+					<p><i class="iconfont icon-erji"></i>113万</p>
+					<img src="http://p4.music.126.net/UL2iOIcKR3VsIpx4TNipFA==/109951163858678631.jpg?param=200y200" alt="">
+				</div>
+				<div class="detailTop-mid">
+					<p class="detailTop-mid-title">爱音乐的孩子再远的路都要坚持走</p>
+					<div class="avatar">
+						<a href="javascript:;">
+							<img src="http://p1.music.126.net/1RAzW_cK2KP9GHrQe8CV0g==/109951163679689049.jpg?param=40y40" alt="">
+							<span class="name">狗大叔爱听歌</span>
+						</a>
+						
+						<span class="time">2019-02-13创建</span>
+					</div>
+					<div class="module">
+						<ul>
+							<li>
+								<a href="javascript:;">
+									<i></i>
+									<span>收藏(6659)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i></i>
+									<span>评论(110)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i></i>
+									<span>分享(45)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i></i>
+									<span>下载全部</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i></i>
+									<span>...更多</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<p class="lable">标签:&nbsp;
+						 <a href="javascript:;">华语</a> 
+						 <span>/</span>
+						 <a href="javascript:;">流行</a>
+						 <span>/</span>
+						 <a href="javascript:;">民谣</a>
+					</p>
+					<p class="introduce">介绍：<span>不埋怨谁</span></p>
+				</div>
+			</div>
+			<div class="musicMid">
+				<span class="allPlay"><i class="iconfont icon-bofang"></i>&nbsp;播放全部(86)</span>
+				<span class="checked"><i class="iconfont icon-xuanze"></i>选择</span>
+				<form action="">
+					<input type="text" placeholder="搜索歌单歌曲">
+					<i></i>
+				</form>
+			</div>
+			<ul class="music-list">
+				<li class="firstBg">
+					<span class="listIndex">01</span>
+					<i class="iconfont icon-xihuan"></i>
+					<span class="name">清白之年</span>
+					<span class="singer">朴树</span>
+					<span class="cd">猎户星座</span>
+					<span class="time">04:34</span>
+					<i class="iconfont icon-sq sq"></i>
+					<i class="iconfont icon-MV mv"></i>
+				</li>
+				<li>
+					<span class="listIndex">01</span>
+					<i class="iconfont icon-xihuan"></i>
+					<span class="name">清白之年</span>
+					<span class="singer">朴树</span>
+					<span class="cd">猎户星座</span>
+					<span class="time">04:34</span>
+					<i class="iconfont icon-sq sq"></i>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

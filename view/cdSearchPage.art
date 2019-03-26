@@ -1,0 +1,55 @@
+    <div class="cd-search">
+		    <div class="top">
+		    	<div class="bg"><img src="<%= SearchCdList.picUrl %>" alt=""></div>
+		        <p>专辑</p>
+		        <div>
+		            <img src="<%= SearchCdList.picUrl %>">
+		            <span><%= SearchCdList.name %></span>
+		            <span>歌手: <span><%= SearchCdList.artist.name %></span> &nbsp;&nbsp; 发行时间: <%= SearchCdList.publishTime %></span>
+		            <ul>
+		            	<li><a href="javascript:;"><i class="iconfont icon-wenjian"></i>收藏(18万)</a></li>
+		            	<li><a href="javascript:;"><i class="iconfont icon-pinglun1"></i>评论(<%= SearchCdList.commentCount %>)</a></li>
+		            	<li><a href="javascript:;"><i class="iconfont icon-fenxiang11"></i>分享(<%= SearchCdList.shareCount %>)</a></li>
+		            	<li><a href="javascript:;"><i class="iconfont icon-xiazai"></i>下载</a></li>
+		            </ul>
+		            <span>介绍: <%= SearchCdList.description %> </span>
+		        </div>
+		        <li class="mid"><span><i class="iconfont icon-bofang"></i>播放全部(<%= SearchCdList.long %>)</span> <span><i class="iconfont icon-xuanze"></i>选择</span></li>
+		    </div>
+		    <div class="main">
+		        <div class="cd-songList">
+		            <ul>
+                    <% if(SearchCdList.songs && SearchCdList.songs.length > 0){ %>
+                        <% for(var i=0; i < SearchCdList.songs.length; i++){ %>
+                            <li>
+                                <span class="index"><%= (i+1) >= 10 ? (i+1) : ('0' + (i+1)) %></span>
+                                <span class="name"><%= SearchCdList.songs[i].name %> 
+                                <% if(SearchCdList.songs[i].alia.length > 0){ %>
+                                <span>(<%= SearchCdList.songs[i].alia %>)</span> 
+                                <% } %>
+                                <% if(SearchCdList.songs[i].mv > 0){ %>
+                                    <i class="iconfont icon-MV mv" data-id="<%= SearchCdList.songs[i].mv %>"></i>
+                                <% } %>
+                                </span>
+                            
+                                <div class="music-list-mid" >
+                                        <i class="iconfont icon-bofang" data-id= "<%= SearchCdList.songs[i].id %>"></i>
+                                        <i class="iconfont icon-gengduo2"></i>
+                                </div>
+                                <span class="singer">
+                                <% for(var j=0; j< SearchCdList.songs[i].al.length; j++){ %>
+                                <%= (j+1) % 2 == 1 ? '' : '/'%>
+                                <span data-id="<%= SearchCdList.songs[i].al[j].id %>"><%= SearchCdList.songs[i].al[j].name %></span>
+                                <% } %>
+                                </span>
+                                <span class="time"><%= SearchCdList.songs[i].dt %></span>
+                                <span class="hotNum">热度: <%= SearchCdList.songs[i].pop %></span>
+                                <i class="iconfont icon-sq sq"></i>
+                            </li>
+                        <% } %>
+                    <% } %>
+		            </ul>
+		        </div>
+		        
+		    </div>
+	</div>

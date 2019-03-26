@@ -1,0 +1,14 @@
+
+	<ul class="clearfix">
+            <% if(hotSingerContent.artists && hotSingerContent.artists.length > 0 ){ %>
+                <% for(var i=0; i< hotSingerContent.artists.length;i++){ %>
+					<li data-id= "<%= hotSingerContent.artists[i].id %>">
+						<div class="img-div"><img src="<%= hotSingerContent.artists[i].img1v1Url %>" alt=""></div>
+						<div class="titleName">
+							<span class="name"><%= hotSingerContent.artists[i].name %></span>
+							<span>dd</span>
+						</div>
+					</li>
+                <% } %>    
+            <% } %>
+	</ul>

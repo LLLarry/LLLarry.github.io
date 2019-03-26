@@ -1,0 +1,58 @@
+<div class="singer-search">
+		    <div class="top">
+				<div class="bg"><img src="<%= SearchSinger.artist.img1v1Url %>" alt=""></div>
+		        <p>歌手</p>
+		        <div>
+		            <img src="<%= SearchSinger.artist.img1v1Url %>">
+		            <span><%= SearchSinger.artist.name %></span>
+		            <span><%= SearchSinger.artist.alias %></span>
+		            <span>单曲数：<span><%= SearchSinger.artist.musicSize %></span></span>
+		            <span>专辑数：<span><%= SearchSinger.artist.albumSize %></span></span>
+		            <span>MV数：<span><%= SearchSinger.artist.mvSize %></span></span>
+		        </div>
+		        <ul class="openul clearfix">
+		            <li class="active" data-index="0">热门<span><%= SearchSinger.hotSongsNum %></span></li>
+		            <li data-index="1">专辑</li>
+		            <li data-index="2">MV</li>
+		            <li data-index="3">歌手详情</li>
+		        </ul>
+		    </div>
+		    <div class="main">
+		        <div class="authorHost">
+		            <ul>
+					<% if(SearchSinger.hotSongs && SearchSinger.hotSongs.length > 0){ %>
+						<% for(var i=0; i< SearchSinger.hotSongs.length;i++ ){ %>
+							<li>
+								<span class="index"><%= tt= (i+1) >= 10? (i+1): ('0'+(i+1)) %></span>
+								<span class="name"><%= SearchSinger.hotSongs[i].name %> 
+								<% if(SearchSinger.hotSongs[i].alia){ %>
+									<span><%= SearchSinger.hotSongs[i].alia %></span>
+									<% if(SearchSinger.hotSongs[i].mv > 0){ %>
+									<i class="iconfont icon-MV mv" data-id= "<%= SearchSinger.hotSongs[i].mv %>"></i>
+									<% } %>
+								<% } %>
+								</span>
+								<div class="music-list-mid">
+									<i class="iconfont icon-bofang" data-id= "<%= SearchSinger.hotSongs[i].id %>"></i>
+									<i class="iconfont icon-gengduo2"></i>
+								</div>
+								<span class="singer"><%= SearchSinger.hotSongs[i].ar.name %></span>
+								<span class="cd-name"><%= SearchSinger.hotSongs[i].al.name %></span>
+								<span class="time"><%= SearchSinger.hotSongs[i].time %></span>
+								<i class="iconfont icon-sq sq"></i>
+							</li>
+						<% } %>
+					<% } %>
+		            </ul>
+		        </div>
+		        <div class="authorCd clearfix">
+		        	 
+		        </div>
+		        <div class="authorMv clearfix">
+		        	
+		        </div>
+		        <div class="authorDeta">
+		        		
+		        </div>
+		    </div>
+		</div>

@@ -1,0 +1,109 @@
+
+<div class="mv-detail">
+		<div class="top">
+			<b> <i class="iconfont icon-xiangzuo-copy"></i> </b>
+			<span>网易云音乐</span>
+		</div>
+		<div class="mv-box">
+			<div class="mv-content">
+			<div class="title">
+				<i class="iconfont icon-xiangzuo-copy"></i><h3><%= mvDetail.name %></h3>
+				<% if(mvDetail.artists.length > 0){ %>
+					<% for(var i=0; i< mvDetail.artists.length; i++){ %>
+					<span data-id= "<%= mvDetail.artists[i].id %>"><%= mvDetail.artists[i].name %></span>
+					<% } %> 
+				<% } %>
+				<p>播放&nbsp;:&nbsp; <%= mvDetail.playCount %></p>
+			</div>
+			<div class="mv-play">
+				<div class="video-div">
+					<video src="<%= url %>" autoplay="true" class="video"></video>
+				</div>
+				<div class="contral">
+					<span class="mv-playBtn"><i class="iconfont icon-bofang3"></i></span>
+					<span class="time">
+						<span class="nowTime">0:00:00</span>/<span class="allTime">0:00:00</span>
+					</span>
+					<div class="mv-lineBox">
+						<div class="mv-line"></div>
+						<div class="mv-dot">
+							<span></span>
+						</div>
+					</div>
+					<span class="vol-icon"><i class="iconfont icon-yinliang"></i></span>
+					<div class="mv-volume">
+						<div class="mv-volume-line"></div>
+						<div class="mv-volume-dot">
+							<span></span>
+						</div>
+					</div>
+					<div class="choose">
+						<span>
+							<i class="iconfont icon-dianshi"></i>
+							高清
+						</span>
+						<div class="videoOpacity">
+							<li data-url= "<%= mvDetail.brs[1080] %>"><i class="iconfont "></i><span>1080P</span></li>
+							<li data-url= "<%= mvDetail.brs[480] %>"><i class="iconfont icon-duihao"></i><span>高清</span></li>
+							<li data-url= "<%= mvDetail.brs[240] %>"><i class="iconfont "></i><span>标清</span></li>
+						</div>
+					</div>
+					<span class="bigScreen"><i class="iconfont icon-quanping-copy"></i></span>
+
+				</div>
+			</div>
+			<div class="sharkMid">
+				<ul>
+					<li><a href="javascript"><i class="iconfont icon-wenjian"></i>&nbsp;<span>收藏(<%= mvDetail.subCount %>)</span></a></li>
+					<li><a href="javascript"><i class="iconfont icon-fenxiang11"></i>&nbsp;<span>分享(<%= mvDetail.shareCount %>)</span></a></li>
+					<li><a href="javascript"><i class="iconfont icon-xiazai"></i>&nbsp;<span>下载</span></a></li>
+				</ul>
+			</div>
+			<div class="left">
+				<h3>评论<span>(<%= mvDetail.commentCount %>)</span></h3>
+				<form action="">
+                  	<input type="text" placeholder="发表评论">
+                </form>
+                <div class="mv-com">
+                	
+                </div>
+				<div class="comment-paging clearfix">
+								
+				</div>
+			</div>
+			<div class="right">	
+				
+				<div class="mv-message">
+					<h3>MV介绍</h3>
+					<div class="time">发布时间: <%= mvDetail.publishTime %></div>
+					<% if(mvDetail.des){ %>
+					<p><%= mvDetail.desc %></p>
+					<% } else {%>
+					<p>暂无详细介绍</p>
+					<% } %>
+				</div>
+				<div class="mv-more">
+					<h3>相关MV</h3>
+					<ul>
+					<% if( comiMv.length > 0){ %>
+						<% for(var i=0; i< comiMv.length; i++){ %>
+							<li data-id="<%= comiMv[i].id %>">
+								<a href="javascript:;">
+									<img src="<%= comiMv[i].cover %>" alt="">
+									<p><i class="iconfont icon-shexiangji"></i><span><%= comiMv[i].playCount %></span></p>
+								</a>
+								<h4><%= comiMv[i].name %></h4>
+								<p>
+									<% for(var j=0; j< comiMv[i].artists.length; j++){ %>		
+										<span> <%= comiMv[i].artists[j].name %></span>
+									<% } %>
+								</p>
+							</li>
+						<% } %>
+					<% } %>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		</div>
+	</div>

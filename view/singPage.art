@@ -1,0 +1,55 @@
+
+    <div class="singPage">
+			<div class="singPage-top">
+				<ul>
+					<li>语种:</li>
+					<!-- <li class="active">全部</li> -->
+					<li class="active">华语</li>
+					<li>欧美</li>
+					<li>日本</li>
+					<li>韩国</li>
+					<li>其他</li>
+				</ul>
+				<ul>
+					<li>分类:</li>
+					<!-- <li class="active">全部</li> -->
+					<li class="active">男歌手</li>
+					<li>女歌手</li>
+					<li>乐队组合</li>
+				</ul>
+				<ul>
+					<li>筛选:</li>
+					<li class="active">热门</li>
+					<li>A</li>
+					<li>B</li>
+					<li>C</li>
+					<li>D</li>
+					<li>E</li>
+					<li>F</li>
+					<li>G</li>
+					<li>H</li>
+					<li>I</li>
+					<li>J</li>
+					<li>K</li>
+					<li>L</li>
+					<li>M</li>
+					<li>N</li>
+					<li>O</li>
+					<li>P</li>
+					<li>Q</li>
+					<li>R</li>
+					<li>S</li>
+					<li>T</li>
+					<li>U</li>
+					<li>V</li>
+					<li>W</li>
+					<li>X</li>
+					<li>Y</li>
+					<li>Z</li>
+					<li>#</li>
+				</ul>
+			</div>
+			<div class="singPage-bottom">
+			
+		    </div>
+	</div>

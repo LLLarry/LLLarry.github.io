@@ -1,0 +1,107 @@
+
+		<div class="recomDetail">
+		<div class="recomDetail-bg">
+		<div class="background">
+        <img src="<%=recomList.coverImgUrl %>">
+    </div>
+			<p class="songList">歌单</p>
+			<div class="detailTop clearfix" >
+				<div class="detailTop-img">
+					<p><i class="iconfont icon-erji"></i>113万</p>
+					<img src="<%=recomList.coverImgUrl %>" alt="">
+				</div>
+				<div class="detailTop-mid">
+					<p class="detailTop-mid-title"><%= recomList.name%></p>
+					<div class="avatar">
+						<a href="javascript:;">
+							<img src="<%= recomList.avatarUrl%>" alt="">
+							<span class="name"><%= recomList.nickname%></span>
+						</a>
+						
+						<span class="time"><%= recomList.createTime%>创建</span>
+					</div>
+					<div class="module">
+						<ul class="clearfix">
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-wenjian"></i>
+									<span>收藏(<%= recomList.subscribedCount%>)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-pinglun1"></i>
+									<span>评论(<%= recomList.commentCount%>)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+								<i class="iconfont icon-fenxiang11"></i>
+									<span>分享(<%= recomList.shareCount%>)</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-xiazai"></i>
+									<span>下载全部</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-gengduo"></i>
+									<span>更多</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<p class="lable">标签:&nbsp;
+						 <% var tt=recomList.tags; for(var i=0; i< tt.length; i++){ %>
+							<a href="javascript:;"><%= tt[i] %></a>
+							<% if(i != tt.length-1){ %>
+									<span>/</span>
+							<% }%>
+						 <% } %>
+					</p>
+					<p class="introduce">介绍：<span><%= recomList.description%></span></p>
+				</div>
+			</div>
+		</div>
+			<div class="musicMid">
+				<div class="musicMid-div">
+				<span class="allPlay"><i class="iconfont icon-bofang"></i>&nbsp;播放全部(<%= recomList.tracks.length%>)</span>
+				<span class="checked"><i class="iconfont icon-xuanze"></i>选择</span>
+				</div>
+				<form action="">
+					<input type="text" placeholder="搜索歌单歌曲">
+					<i></i>
+				</form>
+			</div>
+			<ul class="music-list">
+				<% var th=recomList.tracks; for(var i=0; i< th.length; i++){ %>
+							<li class=<%= i%2== 0? 'firstBg' : '' %>>
+								<span class="listIndex"><%= i+1<10? ('0'+(i+1)) : i+1 %></span>
+								<i class="iconfont icon-xihuan"></i>
+								<span class="name">
+								<%= th[i].name %>
+								</span>
+								<div class="music-list-mid" >
+										<i class="iconfont icon-bofang" data-songId= <%= th[i].id %> data-time= <%= th[i].dt %>></i>
+										<i class="iconfont icon-gengduo2"></i>
+								</div>
+								<span class="singer">
+								<% var ar=th[i].ar; for(var j=0;j< ar.length; j++){ %>
+									<%= ar[j].name %>
+								<% } %>
+								</span>
+								<span class="cd"><%= th[i].al.name %></span>
+								<span class="time"><%= th[i].dt %></span>
+								<i class="iconfont icon-sq sq"></i>
+						
+								<% if(th[i].mv > 0) {%>
+								<i class="iconfont icon-MV mv" data-id= "<%= th[i].mv %>"></i>
+								<% } %>
+							</li>
+				<% } %>
+			
+			</ul>
+		</div>

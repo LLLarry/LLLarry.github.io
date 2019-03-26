@@ -1,0 +1,71 @@
+            <% if(comments.hotComments.length > 0){ %>
+            <div class="goodComment-title">精彩评论</div>
+                        <ul class="goodComment-ul">
+                        <% for(var i=0; i< comments.hotComments.length; i++){ %>
+                            <li class="clearfix">
+                                <div class="comment-left">
+                                    <img src="<%= comments.hotComments[i].avatarUrl %>" alt="">
+                                </div>
+                                <div class="comment-right">
+                                    <span class="name"><%= comments.hotComments[i].nickname %></span>: 
+                                <% if(comments.hotComments[i].beReplied.length > 0){ %>
+                                    <span class="comment-reply-top">回复<span>@<%= comments.hotComments[i].beReplied[0].user.nickname %></span></span>
+                                <% } %>
+                                    <span class="content"><%= comments.hotComments[i].content %></span>
+                            <% if(comments.hotComments[i].beReplied.length > 0){ %>
+                                    <div class="comment-reply"><span>@<%= comments.hotComments[i].beReplied[0].user.nickname %></span>: <%= comments.hotComments[i].beReplied[0].content %></div>
+                            <% } %>
+                                    <div class="comment-bottom clearfix">
+                                        <span class="comment-time"><%= comments.hotComments[i].time %></span>
+                                        <div>
+                                            <span class="comment-count"><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i>
+                                            <% if(comments.hotComments[i].likedCount > 0 ){ %>
+                                                (<%= comments.hotComments[i].likedCount %>)
+                                            <% } %>
+                                            </span><span class="share">分享</span><span class="reply">回复</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        <% } %>
+                        </ul>
+                    <% } %>
+                        <% if(comments.comments.length > 0){ %>
+                        <div class="goodComment-title">最新评论</div>
+						    <ul class="goodComment-ul">
+                            <% for(var i=0; i< comments.comments.length; i++){ %>
+									<li class="clearfix">
+										<div class="comment-left">
+											<img src="<%= comments.comments[i].avatarUrl %>" alt="">
+										</div>
+										<div class="comment-right">
+												<span class="name"><%= comments.comments[i].nickname %></span>: 
+                                            <% if(comments.comments[i].beReplied.length > 0){ %>
+                                                <span class="comment-reply-top">回复<span>@<%= comments.comments[i].beReplied[0].user.nickname %></span></span>
+                                            <% } %>
+												<span class="content"><%= comments.comments[i].content %></span>
+                                             <% if(comments.comments[i].beReplied.length > 0){ %>
+												<div class="comment-reply"><span>@<%= comments.comments[i].beReplied[0].user.nickname %></span>: <%= comments.comments[i].beReplied[0].content %></div>
+                                             <% } %> 
+												<div class="comment-bottom clearfix">
+													<span class="comment-time"><%= comments.comments[i].time %></span>
+													<div>
+														<span class="comment-count">
+															<i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i>
+                                                            <% if(comments.comments[i].likedCount >0 ){ %>
+															    (<%= comments.comments[i].likedCount %>)
+                                                            <% } %>
+														</span>
+														<span class="share">分享</span>
+														<span class="reply">回复</span>
+													</div>
+												</div>
+										</div>
+									</li>
+                                <% } %>
+								</ul>
+                            <% } %>
+                            <% if(comments.comments.length === 0 && comments.hotComments.length === 0 ){ %>
+                            <div class="noComment" style="text-align: center;">还没有评论,赶紧抢沙发~</div>
+                            <% } %>
+                    

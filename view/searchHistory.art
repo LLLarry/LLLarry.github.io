@@ -1,0 +1,6 @@
+            <% for(var i=0; i< searchArr.length; i++){%>
+                    <li>
+                        <span><%=searchArr[i]%></span>
+                        <i class="iconfont icon-x"></i>
+                    </li>
+                <% }%> 

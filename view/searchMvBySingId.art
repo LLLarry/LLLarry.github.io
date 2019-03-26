@@ -1,0 +1,12 @@
+    <% if(mvContentBySingerId.mvs && mvContentBySingerId.mvs.length > 0 ){ %>
+        <% for(var i=0; i< mvContentBySingerId.mvs.length; i++){ %>
+            <li data-id= "<%= mvContentBySingerId.mvs[i].id %>">
+                <a href="javascript:;">
+                    <p class="playCount"><i class="iconfont icon-shexiangji"></i><%= mvContentBySingerId.mvs[i].playCount %></p>
+                    <img src="<%= mvContentBySingerId.mvs[i].imgurl %>" alt="">
+                </a>
+                <h3><%= mvContentBySingerId.mvs[i].name %></h3>
+                <span><%= mvContentBySingerId.mvs[i].publishTime %></span>
+            </li>
+         <% } %>   
+    <% } %>  

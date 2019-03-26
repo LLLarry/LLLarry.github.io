@@ -1,0 +1,11 @@
+
+                <h2><%= singerDesc.name %>简介</h2>
+                <p><%= singerDesc.briefDesc %></p>
+            <% if(singerDesc.introduction && singerDesc.introduction.length> 0 ){ %>
+                <% for(var i=0; i< singerDesc.introduction.length; i++ ){ %>
+                    <h3><%= singerDesc.introduction[i].ti %></h3>
+                    <% for(var j=0; j< singerDesc.introduction[i].txt.length; j++ ){ %>
+                    <p><%= singerDesc.introduction[i].txt[j] %></p>
+                    <% } %>
+                <% } %>   
+            <% } %>           

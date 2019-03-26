@@ -1,0 +1,170 @@
+<div class="cdPage">
+    <div class="cdPage-top"><span>网易云音乐</span></div>
+    <div class="cdPage-bg">
+        <div class="cdPage-bg-img">
+            <img src="<%= cdPageView.al.picUrl%>" alt="">
+        </div>
+        <div class="container">
+            <div class="top">
+            <div class="top-left">
+                <div class="top-left-bg">
+                    <div><img src="<%= cdPageView.al.picUrl%>" alt=""></div>
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <i class="iconfont icon-xihuan"></i>
+                        <a href="javascript:;">喜欢</a>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-xiazai"></i>
+                        <a href="javascript:;">下载</a>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-fenxiang11"></i>
+                        <a href="javascript:;">分享</a>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-wenjian"></i>
+                        <a href="javascript:;">收藏</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-right">
+                <span class="title"><%= cdPageView.name %><span>128k</span></span>
+                <div class="cd-info clearfix">
+                    <div class="cd">专辑： 
+                        <span><%= cdPageView.al.name %></span>
+                    </div>
+                    <div class="singer">歌手： 
+                        <span><%= cdPageView.songer %></span>
+                    </div>
+                </div>
+                <div class="from">来源： 
+                    <span><%= cdPageView.from %></span>
+                </div>
+                <div class="lrc">
+                    <ul class="lrc-ul">
+                        <%  for(var key in cdPageView.lrc){ %>
+                         <li data-timeline= <%= key%>><%= cdPageView.lrc[key] %></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="bottom">
+            <div class="bottom-bg"></div>
+            <div class="bottom-cont container">
+                <div class="bottom-left">
+                    <div class="comment">评论 <span>(6532)</span></div>
+                    <form action="">
+                        <input type="text" placeholder="发表评论">
+                    </form>
+                    <div class="goodComment">
+                        <div class="goodComment-title">精彩评论</div>
+                        <ul class="goodComment-ul">
+                        <% for(var i=0; i< comments.hotComments.length; i++){ %>
+                            <li class="clearfix">
+                                <div class="comment-left">
+                                    <img src="<%= comments.hotComments[i].avatarUrl %>" alt="">
+                                </div>
+                                <div class="comment-right">
+                                    <span class="name"><%= comments.hotComments[i].nickname %></span>: 
+                                <% if(comments.hotComments[i].beReplied.length > 0){ %>
+                                    <span class="comment-reply-top">回复<span>@<%= comments.hotComments[i].beReplied[0].user.nickname %></span></span>
+                                <% } %>
+                                    <span class="content"><%= comments.hotComments[i].content %></span>
+                            <% if(comments.hotComments[i].beReplied.length > 0){ %>
+                                    <div class="comment-reply"><span>@<%= comments.hotComments[i].beReplied[0].user.nickname %></span>: <%= comments.hotComments[i].beReplied[0].content %></div>
+                            <% } %>
+                                    <div class="comment-bottom clearfix">
+                                        <span class="comment-time"><%= comments.hotComments[i].time %></span>
+                                        <div>
+                                            <span class="comment-count"><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i>
+                                            <% if(comments.hotComments[i].likedCount > 0 ){ %>
+                                                (<%= comments.hotComments[i].likedCount %>)
+                                            <% } %>
+                                            </span><span class="share">分享</span><span class="reply">回复</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        <% } %>
+                        </ul>
+                        <div class="goodComment-title">最新评论</div>
+						    <ul class="goodComment-ul">
+                            <% for(var i=0; i< comments.comments.length; i++){ %>
+									<li class="clearfix">
+										<div class="comment-left">
+											<img src="<%= comments.comments[i].avatarUrl %>" alt="">
+										</div>
+										<div class="comment-right">
+												<span class="name"><%= comments.comments[i].nickname %></span>: 
+                                            <% if(comments.comments[i].beReplied.length > 0){ %>
+                                                <span class="comment-reply-top">回复<span>@<%= comments.comments[i].beReplied[0].user.nickname %></span></span>
+                                            <% } %>
+												<span class="content"><%= comments.comments[i].content %></span>
+                                             <% if(comments.comments[i].beReplied.length > 0){ %>
+												<div class="comment-reply"><span>@<%= comments.comments[i].beReplied[0].user.nickname %></span>: <%= comments.comments[i].beReplied[0].content %></div>
+                                             <% } %> 
+												<div class="comment-bottom clearfix">
+													<span class="comment-time"><%= comments.comments[i].time %></span>
+													<div>
+														<span class="comment-count">
+															<i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i>
+                                                            <% if(comments.comments[i].likedCount >0 ){ %>
+															    (<%= comments.comments[i].likedCount %>)
+                                                            <% } %>
+														</span>
+														<span class="share">分享</span>
+														<span class="reply">回复</span>
+													</div>
+												</div>
+										</div>
+									</li>
+                                <% } %>
+								</ul>
+                        <div class="comment-paging clearfix">
+							<li><i class="iconfont icon-xiangzuo-copy"></i></li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li><i class="iconfont icon-xiangyou"></i></li>
+						</div>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <div class="bottom-right-top">包含这首歌曲的歌单</div>
+                    <div>
+                    <% for(var i=0; i< includeThisSong.length; i++){ %>
+                        <div class="trey">
+                            <img src="<%= includeThisSong[i].coverImgUrl %>" alt="">
+                            <div class="rig-content">
+                                <div class="title"><%= includeThisSong[i].name %></div>
+                                <span>播放： <%= includeThisSong[i].playCount %></span>
+                            </div>
+                        </div>
+                    <% } %>
+                    </div>
+                    <div class="bottom-right-song">相似歌曲</div>
+                    <ul class="bottom-right-song-ul">
+                   <% for(var i=0; i< similarSong.length; i++){ %>
+                        <li><%= similarSong[i].name %>
+                            <i class="iconfont iconbo_fang"></i>
+                            <span><%= similarSong[i].artists %></span>
+                        </li>
+                  <% } %>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

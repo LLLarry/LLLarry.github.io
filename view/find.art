@@ -1,0 +1,12 @@
+<div class="find">
+    <div class="find-nav">
+        <p>发现音乐</p>
+        <ul class="openul">
+            <li class="active">个性推荐</li>
+            <li>歌手</li>
+        </ul>
+    </div>
+    <div class="main">
+      
+    </div>
+</div>

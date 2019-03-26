@@ -1,0 +1,13 @@
+   <% if(cdContentBySingerId.hotAlbums.length > 0){ %>
+    <% for(var i=0; i< cdContentBySingerId.hotAlbums.length; i++){ %>
+            <li data-id= "<%= cdContentBySingerId.hotAlbums[i].id %>">
+                <div class="bg-cover">
+                    <a href="javascript:;">
+                        <img src="<%= cdContentBySingerId.hotAlbums[i].picUrl %>" alt="">
+                    </a>
+                    <h3><%= cdContentBySingerId.hotAlbums[i].name %></h3>
+                    <span><%= cdContentBySingerId.hotAlbums[i].publishTime %></span>
+                </div>
+            </li>
+        <% } %>    
+    <% } %>

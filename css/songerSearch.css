@@ -1,0 +1,295 @@
+.singer-search{
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.singer-search .top{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.singer-search .top .bg {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 95%;
+	height: 50%;
+	filter: blur(60px);
+}
+.singer-search .top .bg img{
+	display: block;
+	width: 100%;
+/*	height: 100%;*/
+}
+.singer-search .top>p{
+    color: #666666;
+    font-size: 13px;
+}
+.singer-search .top>div{
+    width: 100%;
+    height: 202px;
+    /*border: 1px solid green;*/
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.singer-search .top>div img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #DDDDE1;
+}
+.singer-search .top>div span:nth-child(2){
+    font-size: 18px;
+    position: absolute;
+    left: 220px;
+    top: 10px;
+}
+.singer-search .top>div span:nth-child(3){
+    position: absolute;
+    left: 220px;
+    top: 50px;
+    color: #666666;
+     font-size: 14px;
+}
+.singer-search .top>div span:nth-child(4){
+    position: absolute;
+    left: 220px;
+    top: 80px;
+     font-size: 14px;
+}
+.singer-search .top>div span:nth-child(5){
+    position: absolute;
+    left: 220px;
+    top: 100px;
+     font-size: 14px;
+}
+.singer-search .top>div span:nth-child(6){
+    position: absolute;
+    left: 220px;
+    top: 120px;
+     font-size: 14px;
+}
+.singer-search .top>div span span{
+    color: #666666;
+}
+.singer-search .main{
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    /*overflow-y: auto;*/
+}
+.singer-search .main>div{
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+	overflow-y: auto;
+	animation: fadeIn .5s;
+}
+.singer-search .top .openul {
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	border-bottom: 1px solid #E4E4E7;
+}
+.singer-search .top .openul li {
+	float: left;
+	margin-right: 24px;	
+}
+.singer-search .top .openul li.active {
+	color: #C62E2E;
+	border-bottom: 1px solid #B52C2E;
+}
+.singer-search .authorHost>ul{
+    margin-top: 15px;
+}
+.singer-search .authorHost>ul li:nth-child(odd){
+    background-color: #F4F4F6;
+}
+/* .singer-search .authorHost>ul li:nth-child(even):hover {
+	background-color: #F4F4F6;
+} */
+.singer-search .authorHost>ul li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.singer-search .authorHost>ul li.active{
+    background-color: #DEDEE0;
+}
+.singer-search .authorHost>ul li .index{
+	position: absolute;
+    left: 2%;
+}
+.singer-search .authorHost>ul li .name{
+	position: absolute;
+    left: 5%;
+	font-size: 14px;
+	max-width: 40%;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.singer-search .authorHost>ul li .name>span{
+	color: #999;
+}
+.singer-search .authorHost>ul li .name .mv{
+	margin-left: 5px;
+	color: #B52E2E;
+}
+.singer-search .authorHost>ul li .music-list-mid{
+	position: absolute;
+	left: 48%;
+	color: #000;
+	display: none;
+}
+.singer-search .authorHost>ul li .music-list-mid .icon-bofang{
+	padding: 10px;
+}
+
+.singer-search .authorHost>ul li .singer{
+	position: absolute;
+    left: 55%;
+	color: #AAAAAB;
+	max-width: 18%;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.singer-search .authorHost>ul li .cd-name{
+	position: absolute;
+    left: 75%;
+	color: #AAAAAB;
+	max-width: 18%;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.singer-search .authorHost>ul li .time{
+	position: absolute;
+	left: 93%;
+	color: #AAAAAB;
+}
+.singer-search .authorHost>ul li .sq{
+	position: absolute;
+	left: 98%;
+	color: #FE672E;
+}
+.singer-search .authorCd {
+	 width: 100%;
+	 display: none;
+}
+.singer-search .authorCd li {
+	width: 145px;
+	height: 165px;
+	float: left;
+	margin-right: 13px; 
+	margin-bottom: 20px;
+	/*background-color: pink;*/
+}
+.singer-search .authorCd li:nth-child(10n) {
+	margin-right: 0; 
+	/*background-color: pink;*/
+}
+.singer-search .authorCd li .bg-cover {
+	width: 145px;
+	height: 115px;
+	background: url(../images/7.png) no-repeat 0px 0px;
+	background-size: 145px 115px;
+}
+.singer-search .authorCd li .bg-cover a {
+	display: block;
+	width: 115px;
+	height: 115px;
+}
+.singer-search .authorCd li .bg-cover a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.singer-search .authorCd li h3 {
+	font-size: 14px;
+	font-weight: 400;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.singer-search .authorCd li span {
+	font-size: 12px;
+	color: #999;
+}
+.singer-search .authorMv {
+	width: 100%;
+	display: none;
+}
+.singer-search .authorMv li {
+	width: 16%;
+	min-width: 250px;
+	height: 205px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+.singer-search .authorMv li a{
+	display: block;
+	width: 100%;
+	height: 153px;
+	position: relative;
+
+}
+.singer-search .authorMv li a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.singer-search .authorMv li a .playCount{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 10px;
+	color: #fff;
+	font-size: 12px;
+	background-color: rgba(0,0,0,.1);
+}
+.singer-search .authorMv li a .playCount i{
+	margin-right: 5px;
+}
+.singer-search .authorMv li h3 {
+	font-weight: 400;
+	font-size: 14px;
+	margin: 10px 0 8px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.singer-search .authorMv li span {
+	font-size: 12px;
+	color: #999;
+}
+.singer-search .authorDeta {
+	display: none;
+}
+.singer-search .authorDeta h2{
+	font-weight: 400;
+	font-size: 16px;
+	margin: 20px 0;
+}
+.singer-search .authorDeta h3{
+	font-weight: 400;
+	font-size: 14px;
+	margin: 20px 0;
+}
+.singer-search .authorDeta p{
+	font-size: 12px;
+	text-indent: 2em;
+	line-height: 25px;
+}

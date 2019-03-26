@@ -1,0 +1,83 @@
+.singPage {
+    width: 990px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    /* animation: show .7s; */
+}
+.singPage .singPage-top {
+    height: 111px;
+    padding-top: 14px;
+}
+.singPage .singPage-top ul {
+    width: 100%;
+    height: 32px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+.singPage .singPage-top ul li{
+    /*line-height: 32px;*/
+    text-align: center;
+    float: left;
+    padding: 0 10px;
+    color: #999;
+    font-size: 12px;
+    border-left: 1px solid #E1E1E2;
+}
+.singPage .singPage-top ul li:nth-child(1){
+    color: #666;
+    border: none;
+    padding: 0;
+}
+.singPage .singPage-top ul li:nth-child(2){
+    border: none;
+}
+
+.singPage .singPage-top ul li.active {
+    color: #C72E2E;
+    
+}
+.singPage .singPage-bottom {
+    
+}
+.singPage .singPage-bottom ul {
+    animation: show .7s;
+}
+.singPage .singPage-bottom ul li{
+    width: 148px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.singPage .singPage-bottom ul li:nth-child(6n){
+    margin-right: 0;
+}
+.singPage .singPage-bottom ul li .img-div{
+    width: 148px;
+    height: 148px;
+    background: url(../images/1.png);
+}
+.singPage .singPage-bottom ul li img{
+    width: 146px;
+    border: 1px solid #E5E5E8;
+    display: block;
+}
+.singPage .singPage-bottom ul li .titleName {
+    width: 100%;
+    height: 37px;
+    line-height: 37px;
+    font-size: 14px;
+    color: #000;
+}
+.singPage .singPage-bottom ul li .titleName span:first-child{
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    line-height: 37px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.singPage .singPage-bottom ul li .titleName span:last-child{
+    float: right;
+}

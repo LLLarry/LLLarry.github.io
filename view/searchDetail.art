@@ -1,0 +1,107 @@
+
+			<ul class="search-nav">
+				<li class="active"><a href="javascript:;">单曲</a></li>
+				<li><a href="javascript:;">歌手</a></li>
+				<li><a href="javascript:;">专辑</a></li>
+			</ul>
+            <div class="searchCotent" onscroll= "MyScroll()">
+                <div class="singMusic">
+                        <div class="bestMatch">
+                         <% if(SearchMatch.artist || SearchMatch.album ){ %>
+                            <h3>最佳匹配</h3>
+                         <% } %>
+                        <% if(SearchMatch.artist){ %>
+                            <% for(var i=0; i< SearchMatch.artist.length;i++){ %>
+                            <div class="songer" data-id="<%= SearchMatch.artist[i].id %>">
+                                <img src="<%= SearchMatch.artist[i].img1v1Url %>" alt="">
+                                歌手：<%= SearchMatch.artist[i].name %>
+                            </div>
+                            <% } %>
+                        <% } %>
+                        <% if(SearchMatch.album){ %>
+                            <% for(var i=0; i< SearchMatch.album.length;i++){ %>
+                            <div class="cd" data-id= "<%= SearchMatch.album[i].id %>">
+                                <img src="<%= SearchMatch.album[i].picUrl %>" alt="">
+                                专辑：<%=SearchMatch.album[i].name %> <span>-<%= SearchMatch.album[i].artist.name %></span>
+                            </div>
+                            <% } %>
+                        <% } %>
+                    
+                    </div>
+                    <ul class="music-list">
+                    <% if(searchResult.length > 0){ %>
+                        <% for(var i=0; i< searchResult.length;i++){ %>
+                            <li class=<%= (i+1) % 2 == 1? 'firstBg' : '' %> >
+                                <div class="top">
+                                    <span class="listIndex"></span>
+                                    <span class="name"><%= searchResult[i].name %></span>
+                                    <div class="music-list-mid" >
+                                            <i class="iconfont icon-bofang" data-songid="<%= searchResult[i].id %>"></i>
+                                            <i class="iconfont icon-gengduo2"></i>
+                                    </div>
+                                    <span class="singer">
+
+                                    <% for(var j=0; j< searchResult[i].artists.length; j++){ %>
+                                    <span data-id="<%= searchResult[i].artists[j].id %>"><%= searchResult[i].artists[j].name %></span>
+                                    <% } %>
+                                    </span>
+                                    <span class="cd" data-id= "<%= searchResult[i].album.id %>"><%= searchResult[i].album.name %></span>
+                                    <span class="time"><%= searchResult[i].time %></span>
+                                    <i class="iconfont icon-sq sq"></i>
+                                    <% if( searchResult[i].mvid > 0){ %>
+                                    <i class="iconfont icon-MV mv" data-id="<%= searchResult[i].mvid %>"></i>
+                                    <% } %>
+                                </div>
+                                <% if( searchResult[i].alias.length > 0){ %>
+                                <p><%=  searchResult[i].alias %></p>
+                                <% } %>
+                            </li>
+                        <% } %>
+                      <% } else{ %> 
+                        <div class="search-mask">暂无搜索结果</div>
+                      <% } %>
+                    </ul>
+                </div>
+              
+                    <div class="singerMusic">
+                    <% if(SearchMatch.artist){ %>
+                        <% for(var i=0; i< SearchMatch.artist.length; i++){ %>
+                            <div class="songer" data-id= "<%= SearchMatch.artist[i].id %>">
+                                <img src="<%= SearchMatch.artist[i].img1v1Url %>" alt="">
+                                <%= SearchMatch.artist[i].name %> 
+                                <% if(SearchMatch.artist[i].alias && SearchMatch.artist[i].alias.length>0){ %>
+                                    <span>(<%= SearchMatch.artist[i].alias.join('') %>)</span>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    <% } else{ %>
+                        <div class="search-mask">暂无搜索结果</div>
+                    <% } %>
+                    </div>
+                <div class="cdPlayer">
+                <% if(cdContent && cdContent.length>0 ){ %>
+                    <% for(var i=0;i< cdContent.length; i++){ %>
+                        <li class="<%= (i+1)%2 === 1 ? 'bgColor' : '' %>" data-id="<%= cdContent[i].id %>">
+                            <div class="bg-cover">
+                                <a href="javascript:;">
+                                    <img src="<%= cdContent[i].picUrl %>" alt="">
+                                </a>
+                            </div>
+                            <span class="name"><%= cdContent[i].name %>
+                             <% if( cdContent[i].alias && cdContent[i].alias.length > 0){ %>
+                                <span>(<%= cdContent[i].alias %>)</span> 
+                             <% } %>
+                             </span>
+                            <span class="singer" data-id="<%= cdContent[i].artist.id %>"><%= cdContent[i].artist.name %>
+                            <% if(  cdContent[i].artist.alia && cdContent[i].artist.alia.length > 0){ %>
+                             <span>(<%= cdContent[i].artist.alia %>)</span> 
+                            <% } %>
+                            </span>
+                        </li>
+                     <% } %>
+                 <% } else{ %>
+                        <div class="search-mask">暂无搜索结果</div>
+                    <% } %>
+                </div>
+            </div>
+			
